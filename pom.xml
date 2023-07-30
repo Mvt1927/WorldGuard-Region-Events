@@ -12,12 +12,13 @@
     <build>
         <plugins>
             <plugin>
+                <!-- Update maven-compiler-plugin to 3.11.0-->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
+                <version>3.11.0</version>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
@@ -32,17 +33,17 @@
           <id>bukkit-repo</id>
           <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
       </repository>
+      
+      <!-- Update repo contain worldguard -->
       <repository>
-          <id>sk89q-repo</id>
-          <url>http://maven.sk89q.com/repo/</url>
+          <id>enginehub-repo</id>
+          <url>https://maven.enginehub.org/repo/</url>
       </repository>
-      <repository>
-          <id>mewin-repo</id>
-          <url>http://maven.mewin.de</url>
-      </repository>
+
   </repositories>
   
     <dependencies>
+
         <!-- Bukkit Dependency -->
         <dependency>
             <groupId>org.bukkit</groupId>
@@ -51,10 +52,11 @@
             <type>jar</type>
         </dependency>
         <!-- WorldGuard Dependency -->
+        <!-- Update worldguard-bukkit version-->
         <dependency>
-            <groupId>com.sk89q</groupId>
-            <artifactId>worldguard</artifactId>
-            <version>6.1</version>
+            <groupId>com.sk89q.worldguard</groupId>
+            <artifactId>worldguard-bukkit</artifactId>
+            <version>7.0.7</version>
             <type>jar</type>
             <scope>provided</scope>
         </dependency>

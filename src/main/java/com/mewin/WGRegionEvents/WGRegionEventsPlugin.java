@@ -23,7 +23,7 @@ public class WGRegionEventsPlugin extends JavaPlugin {
             return;
         }
         
-        listener = new WGRegionEventsListener(this, wgPlugin);
+        listener = new WGRegionEventsListener(this);
         
         getServer().getPluginManager().registerEvents(listener, wgPlugin);
     }
